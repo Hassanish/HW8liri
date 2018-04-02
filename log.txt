@@ -90,11 +90,3 @@ Actors: Ken Leung, Jackie Chan, Tom Wilkinson, Tzi Ma
 -----OMDB Log Entry End-----
 
 
-18. Tweet: Nice day!
-Tweeted on: Sun Apr 01 16:24:56 +0000 2018
-
-19. Tweet: ghjkl; https://t.co/VkNlYp6S3B
-Tweeted on: Sun Apr 01 16:24:33 +0000 2018
-
-20. Tweet: Just setting up my Twitter. #myfirstTweet
-Tweeted on: Sun Apr 01 16:23:53 +0000 2018
