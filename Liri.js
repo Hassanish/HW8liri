@@ -23,10 +23,9 @@ switch (Action) {
       Movie(Value);
       break;
   case "do-what-it-says":
-      randomSearch();
+  doWhatItSays();
       break;
 };
-
 
 function Song(Value) {
     if (Value == "") {
@@ -80,6 +79,8 @@ function myTweets() {
   });
 };
 
+
+
 function Movie(Value) {
     if (Value == "") {
         Value = "Mr. Nobody";
@@ -115,15 +116,19 @@ function Movie(Value) {
     });
 };
 
-function randomSearch() {
+function doWhatItSays() {
     fs.readFile("random.txt", "utf8", function(Err, data) {
-        var randomArray = data.split(", ");
-              if (randomArray[0] == "spotify-this-song") {
-            Song(randomArray[1]);
-        } else if (randomArray[0] == "movie-this") {
-            Movie(randomArray[1]);
+        var doWhatItSaysArray = data.split(", ");
+              if (doWhatItSaysArray[0] == "spotify-this-song") {
+            Song(doWhatItSaysArray[1]);
+        } else if (doWhatItSaysArray[0] == "movie-this") {
+            Movie(doWhatItSaysArray[1]);
         } else {
             myTweets();
         }
     });
 };
+
+
+
+ 
