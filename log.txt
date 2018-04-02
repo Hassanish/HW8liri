@@ -90,3 +90,19 @@ Actors: Ken Leung, Jackie Chan, Tom Wilkinson, Tzi Ma
 -----OMDB Log Entry End-----
 
 
+-----Spotify Log Entry Start-----
+Processed on:
+Mon Apr 02 2018 18:30:41 GMT-0500 (Central Daylight Time)
+
+terminal commands:
+C:\Program Files\nodejs\node.exe,C:\Users\sinyeiman\OneDrive\Documents\CODINGCLASS\HOMEWORK\HW8liri\.js,spotify-this-song,no,woman,no,cry
+
+Data Output: 
+
+========= Result 1 =========
+Artist: Sheku Kanneh-Mason
+Song title: No Woman, No Cry (Arr. Cello)
+Album name: Bob Marley: No Woman, No Cry (Arr. Cello)
+URL Preview: null
+=============================
+-----Spotify Log Entry End-----
