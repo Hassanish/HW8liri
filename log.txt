@@ -1,0 +1,69 @@
+-----Tweets Log Entry Start-----
+
+Processed at: 
+Mon Apr 02 2018 17:54:59 GMT-0500 (Central Daylight Time)
+
+terminal commands: 
+C:\Program Files\nodejs\node.exe,C:\Users\sinyeiman\OneDrive\Documents\CODINGCLASS\HOMEWORK\HW8liri\Liri.js,my-tweets
+
+Data Output: 
+
+1. Tweet: tweets
+Tweeted on: Sun Apr 01 16:29:21 +0000 2018
+
+2. Tweet: All tweets
+Tweeted on: Sun Apr 01 16:29:10 +0000 2018
+
+3. Tweet: javascript sucks
+Tweeted on: Sun Apr 01 16:28:55 +0000 2018
+
+5. Tweet: okhyujnbhj
+Tweeted on: Sun Apr 01 16:28:24 +0000 2018
+
+4. Tweet: ['[;lkl;][;l
+Tweeted on: Sun Apr 01 16:28:31 +0000 2018
+
+7. Tweet: lmnbvftyuj
+Tweeted on: Sun Apr 01 16:27:56 +0000 2018
+
+6. Tweet: Mall of America
+Tweeted on: Sun Apr 01 16:28:19 +0000 2018
+
+8. Tweet: wrlkjhdth
+Tweeted on: Sun Apr 01 16:27:42 +0000 2018
+
+9. Tweet: oiuytr
+Tweeted on: Sun Apr 01 16:27:33 +0000 2018
+
+10. Tweet: iufdssgvcrg
+Tweeted on: Sun Apr 01 16:27:28 +0000 2018
+
+11. Tweet: fghjkl;lkjhgfd
+Tweeted on: Sun Apr 01 16:27:22 +0000 2018
+
+12. Tweet: Watching News
+Tweeted on: Sun Apr 01 16:27:15 +0000 2018
+
+13. Tweet: Lazy day
+Tweeted on: Sun Apr 01 16:27:00 +0000 2018
+
+14. Tweet: fghjkl;
+Tweeted on: Sun Apr 01 16:26:50 +0000 2018
+
+15. Tweet: Hey!
+Tweeted on: Sun Apr 01 16:26:42 +0000 2018
+
+16. Tweet: Traveling on Sunday to Miami https://t.co/ecVk1qAyqO
+Tweeted on: Sun Apr 01 16:26:25 +0000 2018
+
+17. Tweet: Happy Easter https://t.co/MDniu8iXhe
+Tweeted on: Sun Apr 01 16:25:36 +0000 2018
+
+18. Tweet: Nice day!
+Tweeted on: Sun Apr 01 16:24:56 +0000 2018
+
+19. Tweet: ghjkl; https://t.co/VkNlYp6S3B
+Tweeted on: Sun Apr 01 16:24:33 +0000 2018
+
+20. Tweet: Just setting up my Twitter. #myfirstTweet
+Tweeted on: Sun Apr 01 16:23:53 +0000 2018
