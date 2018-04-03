@@ -6,21 +6,21 @@ var Twitter = require("twitter");
 var Spotify = require('node-spotify-api');
 
 var Action = process.argv[2];
-var Value = "";
+var search= "";
 for (var i = 3; i < process.argv.length; i++) {
-    Value += process.argv[i] + " ";
+    search += process.argv[i] + " ";
 };
 
 switch (Action) {
 
   case "spotify-this-song":
-      Song(searchValue);
+      Song(search);
       break;
   case "my-tweets":
       myTweets();
       break;   
   case "movie-this":
-      Movie(Value);
+      Movie(search);
       break;
   case "do-what-it-says":
   doWhatItSays();
@@ -83,16 +83,16 @@ function myTweets() {
 
 
 
-function Movie(Value) {
-    if (Value == "") {
-        Value = "Mr. Nobody";
+function Movie(search) {
+    if (search == "") {
+        search = "Mr. Nobody";
     }
-    var queryUrl = "http://www.omdbapi.com/?t=" + Value.trim() + "&y=&plot=short&apikey=trilogy";
+    var queryUrl = "http://www.omdbapi.com/?t=" + search.trim() + "&y=&plot=short&apikey=trilogy";
     request(queryUrl, function(Err, response, body) {
         fs.appendFile("log.txt", "-----OMDB Log Entry Start-----\n\nProcessed on:\n" + Date() + "\n\n" + "terminal commands:\n" + process.argv + "\n\n" + "Data Output: \n\n",);
         if (JSON.parse(body).Error == 'Movie not found!' ) {
-            console.log("\nSorry try again " + Value + ".\n")
-            fs.appendFile("log.txt", "Sorry try again" + Value + ".\n\n-----OMDB Log Entry End-----\n\n",);
+            console.log("\nSorry try again " + search + ".\n")
+            fs.appendFile("log.txt", "Sorry try again" + search + ".\n\n-----OMDB Log Entry End-----\n\n",);
         } 
         else {
 
