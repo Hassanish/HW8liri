@@ -14,7 +14,7 @@ for (var i = 3; i < process.argv.length; i++) {
 switch (Action) {
 
   case "spotify-this-song":
-      Song(Value);
+      Song(searchValue);
       break;
   case "my-tweets":
       myTweets();
