@@ -27,42 +27,44 @@ switch (Action) {
       break;
 };
 
-function Song(Value) {
-    if (Value == "") {
-        Value = "The Sign Ace of Base";
-    }
-    var spotify = new Spotify(keys.spotify);
-    var Limit = "";
-    if (isNaN(parseInt(process.argv[3])) == false) {
-        Limit = process.argv[3];
-        console.log("\nValues: " + Limit + " songs");
-        Value = "";
-        for (var i = 4; i < process.argv.length; i++) {        
-            Value += process.argv[i] + " ";
-        };
-        }
-    else {
-        console.log(error, occured);
-       }
-    spotify.search({ type: 'track', query: Value, limit: Limit }, function(Err, response) {
-        fs.appendFile("log.txt", "-----Spotify Log Entry Start-----\nProcessed on:\n" + Date() + "\n\n" + "terminal commands:\n" + process.argv + "\n\n" + "Data Output: \n",);
-        
-        var song = response.tracks.items;
+function Song(search) {
+  if (search == "") {
+      search = "The Sign Ace of Base";
+  }
+  var spotify = new Spotify(keys.spotify);
+  var Limit = "";
 
-        for (var i = 0; i < song.length; i++) {
-            console.log("\n======= Spotify Search Result "+ (i+1) +" =======\n");
-            console.log(("Artist: " + song[i].artists[0].name));
-            console.log(("Song title: " + song[i].name));
-            console.log(("Album name: " + song[i].album.name));
-            console.log(("URL Preview: " + song[i].preview_url));
-            console.log("\n=======\n");
+  if (isNaN(parseInt(process.argv[3])) == false) {
+      Limit = process.argv[3];
+      console.log("\nYou requested to return: " + Limit + " songs");
+      search = "";
+      for (var i = 4; i < process.argv.length; i++) {        
+          search+= process.argv[i] + " ";
+      };
+      } 
+      Limit = 1;
+ 
+  spotify.search({ type: 'track', query: search, limit: Limit }, function(respError, response) {
 
-            fs.appendFile("log.txt", "\n========= Result "+ (i+1) +" =========\nArtist: " + song[i].artists[0].name + "\nSong title: " + songResp[i].name + "\nAlbum name: " + songResp[i].album.name + "\nURL Preview: " + songResp[i].preview_url + "\n====================\n",);
-           }
-        fs.appendFile("log.txt","-----Spotify Log Entry End-----\n\n",);
-    })
+      fs.appendFile("log.txt", "-----Spotify Log Entry Start-----\nProcessed on:\n" + Date() + "\n\n" + "terminal commands:\n" + process.argv + "\n\n" + "Data Output: \n",);
+      var song = response.tracks.items;
+
+      for (var i = 0; i < song.length; i++) {
+          console.log("\n========== Spotify Search Result "+ (i+1) +" ============\n");
+          console.log(("Artist: " + song[i].artists[0].name));
+          console.log(("Song title: " + song[i].name));
+          console.log(("Album name: " + song[i].album.name));
+          console.log(("URL Preview: " + song[i].preview_url));
+          console.log("\n==========================\n");
+
+          fs.appendFile("log.txt", "\n========= Result "+ (i+1) +" =========\nArtist: " + song[i].artists[0].name + "\nSong title: " + song[i].name + "\nAlbum name: " + song[i].album.name + "\nURL Preview: " + song[i].preview_url + "\n=============================\n",);
+      }
+
+      fs.appendFile("log.txt","-----Spotify Log Entry End-----\n\n",);
+  })
 };
 
+      
 function myTweets() {
   var client = new Twitter(keys.twitter); 
   var params = { screen_name: 'hax hax', count: 20};
