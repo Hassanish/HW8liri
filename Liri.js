@@ -6,7 +6,7 @@ var Twitter = require("twitter");
 var Spotify = require('node-spotify-api');
 
 var Action = process.argv[2];
-var search= "";
+var search = "";
 for (var i = 3; i < process.argv.length; i++) {
     search += process.argv[i] + " ";
 };
@@ -26,6 +26,8 @@ switch (Action) {
   doWhatItSays();
       break;
 };
+
+
 
 function Song(search) {
   if (search == "") {
@@ -50,12 +52,12 @@ function Song(search) {
       var song = response.tracks.items;
 
       for (var i = 0; i < song.length; i++) {
-          console.log("\n========== Spotify Search Result "+ (i+1) +" ============\n");
+          console.log("\n=============== Spotify Search Result "+ (i+1) +" ===============\n");
           console.log(("Artist: " + song[i].artists[0].name));
           console.log(("Song title: " + song[i].name));
           console.log(("Album name: " + song[i].album.name));
           console.log(("URL Preview: " + song[i].preview_url));
-          console.log("\n==========================\n");
+          console.log("\n=========================================================\n");
 
           fs.appendFile("log.txt", "\n========= Result "+ (i+1) +" =========\nArtist: " + song[i].artists[0].name + "\nSong title: " + song[i].name + "\nAlbum name: " + song[i].album.name + "\nURL Preview: " + song[i].preview_url + "\n=============================\n",);
       }
@@ -64,7 +66,9 @@ function Song(search) {
   })
 };
 
-      
+
+
+
 function myTweets() {
   var client = new Twitter(keys.twitter); 
   var params = { screen_name: 'hax hax', count: 20};
@@ -132,5 +136,20 @@ function doWhatItSays() {
 };
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+     
+  
+       
 
  
